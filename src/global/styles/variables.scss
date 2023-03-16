@@ -1,0 +1,10 @@
+$border: 2px solid $border-color;
+$border-thick: 2.5px solid $border-color;
+$active-border: 3px solid $dark-accent;
+$selected-border: 3px solid $cta-color;
+$mention-wrapper-border: 1px solid $mention-wrapper;
+
+$message-sender-icon-active-filter: invert(85%) sepia(5%) saturate(61%) hue-rotate(169deg) brightness(82%) contrast(86%);
+$message-sender-icon-idle-filter: invert(29%) sepia(19%) saturate(0%) hue-rotate(299deg) brightness(100%) contrast(97%);
+
+$fw-bold: 700;

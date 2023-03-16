@@ -1,0 +1,24 @@
+.main-layout {
+  display: flex;
+  background-color: $base-color;
+  color: $opposite-color;
+  font-size: 17px;
+}
+
+.layout-container {
+  width: 83vw;
+  height: 100vh;
+  color: $opposite-color;
+}
+
+.login-page {
+  height: 100vh;
+}
+
+.signup-page {
+  height: 100vh;
+}
+
+.forgot-password-page {
+  height: 100vh;
+}

@@ -1,0 +1,68 @@
+$base-color: rgba(26, 29, 33, 1); // Main Background
+$dark-accent: rgba(25, 23, 29, 1); // Sidebar Color
+$dark-accent-hover: rgba(39, 36, 44, 1);
+$light-accent: rgba(34, 37, 41, 1); // Message Sender
+$opposite-color-dull: rgba(154, 154, 157, 1);
+$opposite-color: rgba(209, 210, 211, 1);
+$opposite-color-hover: rgba(249, 251, 253, 1);
+$border-color: rgba(43, 42, 47, 1); // Separators
+$cta-color: rgba(17, 100, 163, 1);
+
+$tooltip-bg: rgba(0, 0, 0, 1);
+$tooltip-font: rgba(246, 246, 246, 1);
+$tooltip-chips-bg: rgba(29, 28, 29, 1);
+
+$channel-logo-bg: rgba(171, 171, 173, 1);
+
+$active-color: rgba(0, 122, 90, 1);
+$active-message-sender: rgba(102, 175, 156, 1);
+$active-selected: rgba(255, 255, 255, 1);
+$offline-color: rgba(153, 152, 155, 1);
+$offline-selected: rgba(255, 255, 255, 1);
+$profile-bg: rgba(43, 42, 48, 1);
+$profile-bg-without-src: rgba(45, 117, 172, 1);
+
+$message-sender-bg: rgba(86, 88, 92, 1);
+
+$message-sender-icon-active: rgba(173, 174, 175, 1);
+$message-sender-icon-idle: rgba(75, 78, 81, 1);
+$message-sender-icon-active: rgba(102, 175, 156, 1);
+$message-sender-scrollbar: rgba(125, 128, 130, 1);
+$message-color: rgba(171, 172, 173, 1);
+$sender-message-header: rgba(53, 55, 59, 1);
+$sender-message-option-wrapper: rgba(60, 62, 66, 1);
+$message-sender-placeholder: rgba(119, 121, 123, 1);
+$message-sender-focus-border: rgba(129, 131, 133, 1);
+$monospace-color: rgba(232, 145, 45, 1);
+$mention-wrapper: rgba(52, 55, 58, 1);
+$mention-bg: rgba(34, 49, 58, 1);
+$mention-text-color: rgba(29, 155, 209, 1);
+
+$time-color: rgba(171, 171, 173, 1);
+$edit-delete-icon: rgba(255, 255, 255, 1);
+$edit-delete-icon-bg: rgb(14, 17, 20);
+$edit-delete-border: rgba(58, 60, 63, 1);
+
+$profile-workspace-owner: rgba(255, 255, 255, 1);
+$profile-edit: rgba(29, 155, 209, 1);
+$profile-set-status: rgba(81, 83, 87, 1);
+
+$login-signup-bg: rgba(50, 53, 57, 1);
+$input-border-color: rgb(84, 83, 83);
+$login-placeholder-color: rgba(117, 117, 117, 1);
+$login-signup-text-color: rgba(255, 255, 255, 1);
+$label-color: rgba(255, 255, 255, 1);
+$input-placeholder-color: rgb(209, 210, 211);
+$login-button-color: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+$create-new: rgba(220, 76, 100, 1);
+$google-btn-hover: rgb(234, 232, 232);
+$forget-password: rgb(157, 156, 156);
+$error-color: rgba(255, 76, 84, 1);
+$true-check-circle: rgb(7, 188, 12, 1);
+$close-circle-outline: rgba(246, 33, 33, 1);
+
+$private-switch-border: rgba(129, 131, 133, 1);
+$private-create-btn: rgba(170, 171, 173, 1);
+$private-create-bg: rgba(53, 55, 59, 1);
+$private-create-active-bg: rgba(0, 122, 90, 1);
+$private-create-active-selected-color: rgba(255, 255, 255, 1);

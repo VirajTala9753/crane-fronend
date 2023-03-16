@@ -1,0 +1,4 @@
+{
+    "git.requireGitUserConfig": false,
+    "git.alwaysSignOff": true
+}
