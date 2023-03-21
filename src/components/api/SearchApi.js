@@ -1,19 +1,21 @@
 import api from './message'
 
 export class searchApi {
-  static searchemail = async ({ email }) => {
+  static searchemail = async ({ email, channelId }) => {
     console.log(email, 'email')
     try {
-      const res = await api.get(`users/searchEmail?key=${email}`)
+      const res = await api.get(`users/searchEmail?email=${email}&channelId=${channelId}`)
       console.log(res, 'response')
-
+      if (res.status === false) {
+        return { message: res.msg, filterdUser: [] }
+      }
       return res
     } catch (error) {
       console.log(error)
       return { error }
     }
   }
-}     
+}
 
 export class updateApi {
   static updateId = async ({ selectedUserId, channelId }) => {

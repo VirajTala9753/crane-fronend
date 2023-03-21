@@ -28,9 +28,10 @@ const ChannelProfile = ({ name, isPublic, createdAt, description, _id }) => {
     console.log(searchApi, 'ggg')
     try {
       const res = await searchApi.searchemail({
+        channelId: _id,
         email: value,
       })
-      setDropDownEmail(res.Searchemail)
+      setDropDownEmail(res.filterdUser)
       console.log('res')
     } catch (error) {
       console.log(error)
@@ -56,6 +57,7 @@ const ChannelProfile = ({ name, isPublic, createdAt, description, _id }) => {
     } catch (error) {
       console.log(error)
     }
+    handleClose()
   }
 
   return (

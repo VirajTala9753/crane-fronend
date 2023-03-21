@@ -19,6 +19,7 @@ function App() {
   }
 
   return (
+    <div className = "main_container" data-theme="light" >
     <BrowserRouter>
       <ToastContainer theme="colored" position="top-right" autoClose={2000} closeOnClick />
       <Routes>
@@ -29,6 +30,7 @@ function App() {
         <Route path="*" element={withPrivacy(MainLayout)} />
       </Routes>
     </BrowserRouter>
+    </div>
   )
 }
 

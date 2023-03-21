@@ -22,6 +22,7 @@ const ModalBlock = ({ open, handleClose, modalHeader, modalData }) => {
       aria-describedby="transition-modal-description"
       open={open}
       onClose={handleClose}
+    
       closeAfterTransition
       BackdropComponent={Backdrop}
       BackdropProps={{

@@ -247,7 +247,7 @@ const MessageSender = ({
         </div>
       </Backdrop>)
       : (<>
-        <Header headerProfile={headerProfile} />
+        <Header headerProfile={headerProfile}  />
         <div className=" messenger d-flex flex-center ">
           <div className="d-flex flex-column messages-container mt-auto">
             {messageProfile}
