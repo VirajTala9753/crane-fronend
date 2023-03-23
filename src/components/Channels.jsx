@@ -12,10 +12,6 @@ import { getDifferedState } from './api/utils'
 import { useEffect } from 'react'
 import ModalBlock from './utils/ModalBlock'
 
-
-
-
-
 const Channels = ({ ownerOfApp, channelList, setChannelList, setChannel, setOpenChannel }) => {
   // const [channelList, setChannelList] = useState({});
   const [expanded, setExpanded] = useState(true)
@@ -115,6 +111,7 @@ const Channels = ({ ownerOfApp, channelList, setChannelList, setChannel, setOpen
         description: channelDescription || '',
         isPublic: !checked ? true : false,
         participant: ownerOfApp._id,
+        userName: ownerOfApp.name,
       }
 
       const response = await axios.post('/channel', channelData)
@@ -192,7 +189,7 @@ const Channels = ({ ownerOfApp, channelList, setChannelList, setChannel, setOpen
         })}
 
         <div className="add-channel-modal w-100">
-          <Button  onClick={handleOpen} className="p-0 d-flex">
+          <Button onClick={handleOpen} className="p-0 d-flex">
             <ListItem
               className="with-border"
               prefix={

@@ -18,12 +18,13 @@ export class searchApi {
 }
 
 export class updateApi {
-  static updateId = async ({ selectedUserId, channelId }) => {
-    console.log(selectedUserId, channelId, 'mmm')
+  static updateId = async ({ selectedUserId, channelId ,selectedUserName }) => {
+    console.log(selectedUserId, channelId, selectedUserName , 'mmm')
     try {
       const res = await api.put('users/searchEmail', {
         selectedUserId,
         channelId,
+        selectedUserName
       })
       console.log(res, 'resid')
       return res

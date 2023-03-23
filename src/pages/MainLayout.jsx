@@ -136,6 +136,7 @@ const MainLayout = ({ Component, ...rest }) => {
             friends={friends}
             showProfileEditor={showProfileEditor}
             channelId={channel._id}
+            channel= {channel}
           />
         )
       }

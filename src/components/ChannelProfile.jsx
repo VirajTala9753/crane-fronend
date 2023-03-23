@@ -15,6 +15,7 @@ const ChannelProfile = ({ name, isPublic, createdAt, description, _id }) => {
   const [open, setOpen] = useState(false)
   const [dropDownEmail, setDropDownEmail] = useState([])
   const [selectEmail, setSelectEmail] = useState()
+  const [selectUserName, setSelectUserName] = useState()
   const handleOpen = () => setOpen(true)
   const handleClose = () => setOpen(false)
   useEffect(() => {
@@ -24,15 +25,13 @@ const ChannelProfile = ({ name, isPublic, createdAt, description, _id }) => {
   }, [])
 
   const handleSearch = async (value) => {
-    console.log(value, 'value')
-    console.log(searchApi, 'ggg')
     try {
       const res = await searchApi.searchemail({
         channelId: _id,
         email: value,
       })
+      if (!res.filterdUser.length) return
       setDropDownEmail(res.filterdUser)
-      console.log('res')
     } catch (error) {
       console.log(error)
       setDropDownEmail([])
@@ -51,13 +50,23 @@ const ChannelProfile = ({ name, isPublic, createdAt, description, _id }) => {
   }
   const handelSubmit = async (e) => {
     e.preventDefault()
+    if (!selectEmail) return
+
     try {
-      const data = await updateApi.updateId({ selectedUserId: selectEmail, channelId: _id })
+      const data = await updateApi.updateId({
+        selectedUserId: selectEmail,
+
+        channelId: _id,
+        selectedUserName: selectUserName,
+      })
       console.log(data, 'data')
+      handleClose()
     } catch (error) {
       console.log(error)
     }
-    handleClose()
+    setDropDownEmail([])
+    setSelectEmail()
+    setSelectUserName()
   }
 
   return (
@@ -110,11 +119,14 @@ const ChannelProfile = ({ name, isPublic, createdAt, description, _id }) => {
                 freeSolo
                 onInputChange={(e, value) => {
                   searchEmail(value)
-                  console.log(value, 'iid')
                 }}
                 onChange={(e, value) => {
+                  console.log(value.name, 'valuuee')
+                  setSelectUserName(value.name)
                   console.log(value._id, 'onchange')
                   setSelectEmail(value._id)
+
+                  console.log(selectUserName, 'naaaaame')
                 }}
                 options={dropDownEmail}
                 getOptionLabel={(option) => (option ? option.email : null)}

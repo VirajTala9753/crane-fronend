@@ -496,6 +496,12 @@
   .header {
     margin: auto;
     .profile-details {
+      .modal :first-child {
+        display: flex;
+        div ~ svg {
+          display: none;
+        }
+      }
       border-bottom: $border;
       height: 6vh;
       padding: 4px 20px 4px 16px;

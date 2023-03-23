@@ -22,7 +22,7 @@ const ModalBlock = ({ open, handleClose, modalHeader, modalData }) => {
       aria-describedby="transition-modal-description"
       open={open}
       onClose={handleClose}
-    
+      
       closeAfterTransition
       BackdropComponent={Backdrop}
       BackdropProps={{
@@ -31,7 +31,7 @@ const ModalBlock = ({ open, handleClose, modalHeader, modalData }) => {
     >
       <Fade in={open} className="create-channel-box">
         <Box sx={style}>
-          <div className="d-flex justify-content-between m-0 align-items-center">
+          <div className="d-flex justify-content-between m-0 align-items-center modal">
             {modalHeader}
             <CgClose onClick={handleClose} size={20} className="cursor-pointer p-1" />
           </div>

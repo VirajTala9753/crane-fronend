@@ -20,6 +20,7 @@ const MessageSender = ({
   receiverId,
   chatMessage,
   setChatMessage,
+  channel
 }) => {
   const [loading, setLoading] = useState()
   const [editingMode, setEditingMode] = useState(false)
@@ -247,7 +248,7 @@ const MessageSender = ({
         </div>
       </Backdrop>)
       : (<>
-        <Header headerProfile={headerProfile}  />
+        <Header channel={channel} headerProfile={headerProfile}  />
         <div className=" messenger d-flex flex-center ">
           <div className="d-flex flex-column messages-container mt-auto">
             {messageProfile}
