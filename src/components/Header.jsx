@@ -5,10 +5,16 @@ import { TiPlus } from 'react-icons/ti'
 import CraneTooltip from './utils/CraneTooltip'
 import ModalBlock from './utils/ModalBlock'
 
+import { HiUser } from 'react-icons/hi'
+import UserProfileImage from './utils/UserProfileImage'
+import UserStatus from './utils/UserStatus'
+
 const Header = ({ headerProfile, channel }) => {
   const [open, setOpen] = useState(false)
   const handleOpen = () => setOpen(true)
   const handleClose = () => setOpen(false)
+  const [showDiv, setShowDiv] = useState(false);
+  const [activeTag, setActiveTag] = useState("about");
 
 
   return (
@@ -17,21 +23,35 @@ const Header = ({ headerProfile, channel }) => {
         <div className="header-profile d-flex  align-items-center" onClick={handleOpen}>
           {headerProfile}
         </div>
+       
+       { channel &&
         <ModalBlock
           open={open}
           handleClose={handleClose}
           modalHeader={<div className='d-flex'>{headerProfile}</div>}
           modalData={
             <div>
-              <div>
-                <h2>Participants </h2>
+               <div className='d-flex justify-content-center py-3'>
+              <div className = {`${activeTag === "members" ? 'part' : '' } px-2` }   onClick={() => {  
+              setActiveTag("members")
+             }
+              }>
+             members
               </div>
-              {channel?.participants.map((user) => 
+             
+              <div  className ={`${activeTag === "about" ? 'part' : '' } px-2`  }  onClick={() => { 
+              setActiveTag("about")} }>About </div></div>
+              <div>
+              
+              {
+               activeTag === "members" &&  channel?.participants.map((user) => 
                 <div>{user.userName}</div>
               )}
+              </div>
+            
             </div>
           }
-        />
+        />}
       </div>
       <div className="add-bookmark d-flex align-items-center">
         <CraneTooltip

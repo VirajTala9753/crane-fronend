@@ -169,7 +169,7 @@ const Channels = ({ ownerOfApp, channelList, setChannelList, setChannel, setOpen
       <div className={`channels-list ${expanded ? 'expanded' : ''}`}>
         {sortedChannelList?.map((channel) => {
           const { name, description, isPublic, _id, participants, selected } = channel
-          return isPublic || participants.includes(ownerOfApp._id) ? (
+          return isPublic || participants.some((participants)=> participants._id === ownerOfApp._id.toString()) ? (
             <div
               onClick={() => {
                 setChannel(channel)

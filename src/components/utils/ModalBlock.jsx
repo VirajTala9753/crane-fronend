@@ -29,7 +29,7 @@ const ModalBlock = ({ open, handleClose, modalHeader, modalData }) => {
         timeout: 500,
       }}
     >
-      <Fade in={open} className="create-channel-box">
+      <Fade in={open} className="create-channel-box  ">
         <Box sx={style}>
           <div className="d-flex justify-content-between m-0 align-items-center modal">
             {modalHeader}

@@ -8,7 +8,7 @@ import Autocomplete, { createFilterOptions } from '@mui/material/Autocomplete'
 import { IoLockClosedOutline } from 'react-icons/io5'
 import moment from 'moment'
 import { searchApi, updateApi } from './api/SearchApi'
-
+import SearchApi from './SearchApi'
 let searchTimeout = null
 
 const ChannelProfile = ({ name, isPublic, createdAt, description, _id }) => {
@@ -95,9 +95,9 @@ const ChannelProfile = ({ name, isPublic, createdAt, description, _id }) => {
           </span>
         )}
 
-        <Button className="d-flex align-items-center add-people " onClick={handleOpen}>
+      { isPublic && <Button className="d-flex align-items-center add-people " onClick={handleOpen}>
           <RiUserAddLine className="mr-2" size={22} /> Add people
-        </Button>
+        </Button> }
         <ModalBlock
           open={open}
           handleClose={handleClose}
@@ -111,6 +111,7 @@ const ChannelProfile = ({ name, isPublic, createdAt, description, _id }) => {
           }
           modalData={
             <div className="mt-4 d-flex flex-column add-people-container">
+             {/* <SearchApi _id={_id}  open={open}  /> */}
               <Autocomplete
                 disablePortal
                 id="outlined-basic-description"
