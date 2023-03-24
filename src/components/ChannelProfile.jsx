@@ -95,8 +95,8 @@ const ChannelProfile = ({ name, isPublic, createdAt, description, _id }) => {
           </span>
         )}
 
-      { isPublic && <Button className="d-flex align-items-center add-people " onClick={handleOpen}>
-          <RiUserAddLine className="mr-2" size={22} /> Add people
+  { !isPublic &&  <Button className="d-flex align-items-center add-people " onClick={handleOpen}>
+          <RiUserAddLine className="mr-2" size={22} />  Add people
         </Button> }
         <ModalBlock
           open={open}
@@ -135,7 +135,7 @@ const ChannelProfile = ({ name, isPublic, createdAt, description, _id }) => {
                 fullWidth
                 style={{ fontSize: '20px !important' }}
                 renderInput={(params) => <TextField {...params} label="search email" />}
-              />
+              />   
               <Button className="add-people-save-btn" onClick={handelSubmit}>
                 save
               </Button>
