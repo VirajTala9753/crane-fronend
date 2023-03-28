@@ -95,9 +95,11 @@ const ChannelProfile = ({ name, isPublic, createdAt, description, _id }) => {
           </span>
         )}
 
-  { !isPublic &&  <Button className="d-flex align-items-center add-people " onClick={handleOpen}>
-          <RiUserAddLine className="mr-2" size={22} />  Add people
-        </Button> }
+        {!isPublic && (
+          <Button className="d-flex align-items-center add-people " onClick={handleOpen}>
+            <RiUserAddLine className="mr-2" size={22} /> Add people
+          </Button>
+        )}
         <ModalBlock
           open={open}
           handleClose={handleClose}
@@ -111,7 +113,7 @@ const ChannelProfile = ({ name, isPublic, createdAt, description, _id }) => {
           }
           modalData={
             <div className="mt-4 d-flex flex-column add-people-container">
-             {/* <SearchApi _id={_id}  open={open}  /> */}
+              {/* <SearchApi _id={_id}  open={open}  /> */}
               <Autocomplete
                 disablePortal
                 id="outlined-basic-description"
@@ -135,7 +137,7 @@ const ChannelProfile = ({ name, isPublic, createdAt, description, _id }) => {
                 fullWidth
                 style={{ fontSize: '20px !important' }}
                 renderInput={(params) => <TextField {...params} label="search email" />}
-              />   
+              />
               <Button className="add-people-save-btn" onClick={handelSubmit}>
                 save
               </Button>

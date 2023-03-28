@@ -195,7 +195,8 @@
   .MuiInputBase-root {
     .MuiOutlinedInput-notchedOutline {
       border-color: $input-border-color;
-    }
+    }     
+    
 
     input {
       color: $input-placeholder-color;
@@ -262,9 +263,6 @@
       cursor: pointer;
       background-color: $dark-accent-hover;
 
-      // img {
-      //   display: flex;
-      // }
     }
   }
 

@@ -16,7 +16,7 @@ export class searchApi {
     }
   }
 }
-
+  
 export class updateApi {
   static updateId = async ({ selectedUserId, channelId ,selectedUserName }) => {
     console.log(selectedUserId, channelId, selectedUserName , 'mmm')
